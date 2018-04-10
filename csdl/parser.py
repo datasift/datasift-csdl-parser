@@ -9,7 +9,7 @@ class CSDLParser(object):
 
     def __init__(self):
         # supported operators
-        operator = pp.Regex(r"<=|>=|<>|\!=|==|<|>|not|in|regex_partial|regex_exact|geo_box|geo_radius|geo_polygon|contains_any|contains_all|substr|contains_near|any|contains_substr|near|contains").setName("operator").addParseAction(self.validateOperator)
+        operator = pp.Regex(r"<=|>=|<>|\!=|==|<|>|not|in|regex_partial|regex_exact|geo_box|geo_radius|geo_polygon|contains_any|contains_all|substr|contains_near|any|contains_substr|near|contains|wildcard").setName("operator").addParseAction(self.validateOperator)
 
         # literals
         number = pp.Regex(r"[+-]?\d+(:?\.\d*)?(:?[eE][+-]?\d+)?").setName("number")
